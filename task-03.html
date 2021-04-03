@@ -12,11 +12,30 @@
         background-color: #fff;
         color: #424242;
         line-height: 1.5;
+        box-sizing: border-box;
+      }
+      
+      #gallery{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 380px 380px;
+        grid-gap: 10px;
+
+      }
+
+      .gallery__item {
+        padding: 20px;
+        list-style-type: none;
+        border: 5px inset rgb(221, 220, 220);
+
       }
     </style>
   </head>
   <body>
     <p><a href="index.html">На главную</a></p>
+
+    <ul id="gallery"></ul>
+
     <script src="js/task-03.js" type="module"></script>
   </body>
 </html>
