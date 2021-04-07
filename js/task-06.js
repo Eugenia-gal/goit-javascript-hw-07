@@ -4,7 +4,6 @@
 
 const inputEl = document.querySelector('#validation-input');
 const charCount = Number(inputEl.dataset.length);
-console.log(charCount);
 
 inputEl.addEventListener('change', onFinishInput);
 
