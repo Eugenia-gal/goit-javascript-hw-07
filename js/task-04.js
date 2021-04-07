@@ -14,6 +14,10 @@ const counterValueEl = document.querySelector('#value');
 
 let counter = Number(counterValueEl.textContent);
 
+const increment = value => value += 1;
+const decrement = value => value -= 1;
+const refreshInterface = (interfaceEl, newValue) => interfaceEl.textContent = newValue;
+
 actionsBtnEl.forEach(actionBtn  => addEventListener('click', onButtonClick));
 
 
@@ -22,22 +26,12 @@ function onButtonClick(e) {
     if (e.target.dataset.action === 'increment') {
        counter = increment(counter);
     }
-    
+
     if (e.target.dataset.action === 'decrement') {
         counter = decrement(counter);
-        counterValueEl.textContent = counter;
     }
 
-    counterValueEl.textContent = counter;
-}
-
-
-function increment(value) {
-    return value += 1;
-
-}
-function decrement(value) {
-    return value -= 1;
+    refreshInterface(counterValueEl, counter);
 }
 
 
